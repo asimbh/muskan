@@ -3,6 +3,9 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import 'package:muskan1/HomePage.dart';
 import 'package:muskan1/auth_controller.dart';
 
+import 'Intro.dart';
+
+
 var emailCntrl = TextEditingController();
 var passwordCntrl = TextEditingController();
 
@@ -19,6 +22,14 @@ class signup extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
             children: [
+              Container(
+                  alignment: Alignment.topLeft,
+                  padding: EdgeInsets.symmetric(vertical: 10,horizontal: 10),
+                  child: IconButton(
+                    onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));},
+                    icon: Icon(Icons.arrow_back),
+                  )
+              ),
               Container(
                   margin: const EdgeInsets.only(top: 0.2 , bottom: 0.2),
                   width: widthScreen,
@@ -134,22 +145,16 @@ class signup extends StatelessWidget {
               ),
               SizedBox(height: 70,),
               GestureDetector(
-                onTap: (){
-                  AuthController.instance.register(emailCntrl.text.trim(), passwordCntrl.text.trim());
-                },
-
-              child: Container(
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(29),
                   child: FlatButton(
                     padding: EdgeInsets.symmetric(vertical: 15,horizontal: 25),
                     color: Color(0xFF3B4AF3),
-                    onPressed: (){},
+                    onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => intro()));},
                     child: Text("Get Started", style: TextStyle(color: Colors.white),),
                   ),
 
                 ) ,
-              ),
               ),
               SizedBox(height: 60,),
               RichText(text: TextSpan(
@@ -159,8 +164,7 @@ class signup extends StatelessWidget {
                     fontSize: 10,
 
                   )
-              )
-              ),
+              )),
 
             ]
         ),

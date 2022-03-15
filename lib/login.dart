@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:muskan1/HomePage.dart';
+import 'package:muskan1/Intro.dart';
 import 'signup.dart';
 
 
@@ -21,11 +23,20 @@ class _loginState extends State<login> {
     final heightScreen = MediaQuery.of(context).size.height;
     final widthScreen = MediaQuery.of(context).size.width;
 
+
     return Scaffold(
       backgroundColor: Color(0xFFefeef3),
       body: SingleChildScrollView(
         child: Column(
             children: [
+              Container(
+                alignment: Alignment.topLeft,
+                  padding: EdgeInsets.symmetric(vertical: 10,horizontal: 10),
+                child: IconButton(
+                  onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));},
+                  icon: Icon(Icons.arrow_back),
+                )
+              ),
               Container(
                   margin: const EdgeInsets.only(top: 0.5 , bottom: 0.5),
                   width: widthScreen,
@@ -142,7 +153,9 @@ class _loginState extends State<login> {
                   child: FlatButton(
                     padding: EdgeInsets.symmetric(vertical: 15,horizontal: 25),
                     color: Color(0xFF3B4AF3),
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => intro()));
+                    },
                     child: Text("Login", style: TextStyle(color: Colors.white),),
                   ),
 

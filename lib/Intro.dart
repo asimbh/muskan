@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:muskan1/dash.dart';
 import 'login.dart';
 import 'signup.dart';
 
@@ -18,23 +19,27 @@ class intro extends StatelessWidget{
                 height: heightScreen,
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('assets/hmbg.jpg'),
+                      image: AssetImage('assets/rb.png'),
                       fit: BoxFit.fitHeight,
                     )
                 ),
               ),
             ),
 
-            ClipRRect(
-              borderRadius: BorderRadius.circular(29),
-              child: FlatButton(
-                padding: EdgeInsets.symmetric(vertical: 15,horizontal: 25),
-                color: Color(0xFF3848FC),
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => signup()));
-                },
-                child: Text("Sign Up", style: TextStyle(color: Colors.white),),
-              ),
+            Container(
+              alignment: Alignment.bottomCenter,
+              margin: const EdgeInsets.only(top: 0.2 , bottom: 19),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(29),
+                child: FlatButton(
+                  padding: EdgeInsets.symmetric(vertical: 15,horizontal: 25),
+                  color: Color(0xFF3848FC),
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => dash()));},
+                  child: Text("GET STARTED", style: TextStyle(color: Colors.white),),
+                ),
+            ),
+
             ),
 
 
