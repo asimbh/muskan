@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "536300688863",
+    "project_id": "muskan-11d94",
+    "storage_bucket": "muskan-11d94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536300688863:android:141dba814e2a09075f206a",
+        "android_client_info": {
+          "package_name": "com.example.muskan1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "536300688863-68d70pv1kiuf825ak3kdkheg1ao67r1o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuV5DMb7Bo_7Gv9H7nLL5Rcsca_gAN8g4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "536300688863-68d70pv1kiuf825ak3kdkheg1ao67r1o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
