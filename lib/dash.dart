@@ -33,7 +33,7 @@ class dash extends StatelessWidget {
             Container(
               padding: EdgeInsets.symmetric(vertical: 70,horizontal: 10),
               child: RichText(text: TextSpan(
-              text: "HI, ASIM",
+              text: "HI, TEST",
               style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold,),
             ),
 
